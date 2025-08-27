@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <omp.h>
 
-#define BUFFER_SIZE 5
+#define BUFFER_SIZE 3
 #define NUM_PRODUCERS 2
 #define NUM_CONSUMERS 2
-#define ITEMS_PER_PRODUCER 10
+#define ITEMS_PER_PRODUCER 15
 
 int buffer[BUFFER_SIZE];
 int count = 0;
