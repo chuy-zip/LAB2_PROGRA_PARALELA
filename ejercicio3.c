@@ -3,7 +3,7 @@
 #include <omp.h>
 #include <math.h>
 
-#define BUFFER_SIZE 10
+#define BUFFER_SIZE 4
 #define NUM_ITEMS 20
 
 int buffer[BUFFER_SIZE];
@@ -23,11 +23,6 @@ void producir(int item, int id) {
                 inserted = 1;
                 printf("Productor %d produjo: %d (count: %d)\n", id, item, count);
             }
-        }
-        if (!inserted) {
-            // Pequeña pausa para evitar busy waiting excesivo
-            #pragma omp critical
-            { /* Solo para mantener la estructura crítica */ }
         }
     }
 }
